@@ -16,7 +16,7 @@ variables:
   dockerfilePath: '$(Build.SourcesDirectory)/Dockerfile'
   tag: '$(Build.BuildId)'
   k8sconnection: cluster1
-  k8sNamespace: walmart
+  k8sNamespace: walmartdev
   imagePullSecret: test
 
   # Agent VM image name
@@ -87,4 +87,4 @@ stages:
               containers: |
                 $(containerRegistry)/$(imageRepository):$(tag)
               kubernetesServiceConnection: $(k8sconnection)
-              arguments: '--n= walmart'          
+              arguments: '--n= walmartdev'          
