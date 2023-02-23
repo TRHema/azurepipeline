@@ -43,9 +43,9 @@ stages:
 
     - task: PublishPipelineArtifact@1
       inputs:
-        targetPath: '$(Pipeline.Workspace)'
+        path: manifests
         artifact: 'manifests'
-        publishLocation: 'pipeline'
+        
 - stage: Deploydev
   displayName: Deployment to dev
   dependsOn: Build
