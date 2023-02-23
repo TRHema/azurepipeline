@@ -2,7 +2,7 @@ apiVersion: apps/v1
 kind: Deployment
 metadata:
   name:  walmartpayment-dev
-  namespace: walmart
+  namespace: walmartdev
   labels:
     app:  walmartpayment-dev
 spec:
@@ -54,6 +54,6 @@ spec:
           periodSeconds: 10
         ports:
         - containerPort:  80
-          name:  walmart
+          name:  walmartdev
         imagePullPolicy: Always
       restartPolicy: Always
