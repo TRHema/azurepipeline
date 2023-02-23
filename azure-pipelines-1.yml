@@ -13,7 +13,7 @@ variables:
   dockerRegistryServiceConnection: 'walmartdev'
   imageRepository: 'trhemaazurepipeline'
   containerRegistry: 'walmartdev.azurecr.io'
-  dockerfilePath: '$(Build.SourcesDirectory)/Dockerfile'
+  dockerfilePath: '**/Dockerfile'
   tag: '$(Build.BuildId)'
   k8sconnection: cluster1
   k8sNamespace: walmartdev
