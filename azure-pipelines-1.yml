@@ -87,4 +87,4 @@ stages:
               containers: |
                 $(containerRegistry)/$(imageRepository):$(tag)
               kubernetesServiceConnection: $(k8sconnection)
-              arguments: '--n=walmartdev'          
+              arguments: '--n=default'          
